@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import photographer from "../src/assets/portfolio/photographer.jpg"
+import photographer from "/src/assets/portfolio/photographer.jpg"
 
 function About() {
   return (
