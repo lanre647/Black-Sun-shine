@@ -68,7 +68,7 @@ export default function Home() {
         animate={{ opacity: 0.2 }}
         transition={{ duration: 2 }}
         className="absolute inset-0 bg-cover bg-center z-0"
-        style={{ backgroundImage: "url('src/assets/portfolio/bg.jpg')" }}
+        style={{ backgroundImage: "url('/src/assets/portfolio/bg.jpg')" }}
       />
 
       {/* Scroll Down Indicator */}

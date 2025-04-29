@@ -13,7 +13,7 @@ function About() {
 
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <motion.img
-          src="src/assets/portfolio/photographer.jpg"
+          src="/src/assets/portfolio/photographer.jpg"
           alt="Photographer at work"
           className="w-full rounded-3xl shadow-xl"
           initial={{ opacity: 0, y: 30 }}
