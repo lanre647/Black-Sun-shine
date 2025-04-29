@@ -16,7 +16,7 @@ import corporate6 from "../assets/portfolio/corporate6.jpg";
 import corporate7 from "../assets/portfolio/corporate7.jpg";
 import corporate8 from "../assets/portfolio/corporate8.jpg";
 import corporate9 from "../assets/portfolio/corporate9.jpg";
-// import beauty1 from "../assets/portfolio/beauty1.jpg";
+import beauty1 from "../assets/portfolio/beauty1.jpg";
 import beauty2 from "../assets/portfolio/beauty2.webp";
 import beauty3 from "../assets/portfolio/beauty3.webp";
 import beauty4 from "../assets/portfolio/beauty4.webp";
@@ -121,6 +121,7 @@ const images = [
   { src: event12, title: 'Stylish Footwear', category: 'Event' },
   { src: event13, title: 'Stylish Footwear', category: 'Event' },
   { src: event15, title: 'Stylish Footwear', category: 'Event' },
+  { src: event14, title: 'Stylish Footwear', category: 'Event' },
   { src: event16, title: 'Stylish Footwear', category: 'Event' },
   { src: event17, title: 'Stylish Footwear', category: 'Event' },
   { src: event18, title: 'Stylish Footwear', category: 'Event' },
