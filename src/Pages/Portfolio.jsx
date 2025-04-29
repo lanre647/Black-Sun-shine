@@ -16,7 +16,7 @@ import corporate6 from "../assets/portfolio/corporate6.jpg";
 import corporate7 from "../assets/portfolio/corporate7.jpg";
 import corporate8 from "../assets/portfolio/corporate8.jpg";
 import corporate9 from "../assets/portfolio/corporate9.jpg";
-import beauty1 from "../assets/portfolio/beauty1.jpg";
+// import beauty1 from "../assets/portfolio/beauty1.jpg";
 import beauty2 from "../assets/portfolio/beauty2.webp";
 import beauty3 from "../assets/portfolio/beauty3.webp";
 import beauty4 from "../assets/portfolio/beauty4.webp";
