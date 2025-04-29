@@ -16,13 +16,12 @@ import corporate6 from "../assets/portfolio/corporate6.jpg";
 import corporate7 from "../assets/portfolio/corporate7.jpg";
 import corporate8 from "../assets/portfolio/corporate8.jpg";
 import corporate9 from "../assets/portfolio/corporate9.jpg";
-import beauty1 from "../assets/portfolio/beauty1.jpg";
+import beauty1 from "../assets/portfolio/beauty1.webp";
 import beauty2 from "../assets/portfolio/beauty2.webp";
 import beauty3 from "../assets/portfolio/beauty3.webp";
 import beauty4 from "../assets/portfolio/beauty4.webp";
 import beauty5 from "../assets/portfolio/beauty5.webp";
 import beauty6 from "../assets/portfolio/beauty6.webp";
-import beauty7 from "../assets/portfolio/beauty7.webp";
 import creative1 from "../assets/portfolio/creative1.jpg";
 import creative2 from "../assets/portfolio/creative2.jpg";
 import creative3 from "../assets/portfolio/creative3.jpg";
@@ -107,7 +106,6 @@ const images = [
   { src: product6, title: 'Concert Lights', category: 'product Shot' },
   { src: event7, title: 'Stylish Footwear', category: 'Event' },
   { src: creative7, title: 'Office Ambiance', category: 'Creative Shot' },
-  { src: beauty7, title: 'Smiles All Around', category: 'Beauty Shot' },
   { src: corporate7, title: 'Urban Creativity', category: 'Corporate Portrait' },
   { src: event8, title: 'Stylish Footwear', category: 'Event' },
   { src: creative8, title: 'Office Ambiance', category: 'Creative Shot' },
