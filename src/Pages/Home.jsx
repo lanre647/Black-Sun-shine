@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import bg from "/src/assets/portfolio/bg.jpg";
+import bg from "../assets/portfolio/bg.jpg";
 
 export default function Home() {
   const containerVariants = {
