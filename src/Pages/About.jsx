@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import photographer from "../src/assets/portfolio/photographer.jpg"
 
 function About() {
   return (
@@ -13,7 +14,7 @@ function About() {
 
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <motion.img
-          src="../src/assets/portfolio/photographer.jpg"
+          src={photographer}
           alt="Photographer at work"
           className="w-full rounded-3xl shadow-xl"
           initial={{ opacity: 0, y: 30 }}
