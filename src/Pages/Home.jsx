@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import bg from "/src/assets/portfolio/bg.jpg";
 
 export default function Home() {
   const containerVariants = {
@@ -68,7 +69,7 @@ export default function Home() {
         animate={{ opacity: 0.2 }}
         transition={{ duration: 2 }}
         className="absolute inset-0 bg-cover bg-center z-0"
-        style={{ backgroundImage: "url('/src/assets/portfolio/bg.jpg')" }}
+        style={{ backgroundImage: `url(${bg})` }}
       />
 
       {/* Scroll Down Indicator */}

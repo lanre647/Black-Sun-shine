@@ -1,79 +1,151 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useScroll, useSpring } from 'framer-motion';
+import product1 from "/src/assets/portfolio/product1.jpg";
+import product2 from "/src/assets/portfolio/product2.jpg";
+import product3 from "/src/assets/portfolio/product3.jpg";
+import product4 from "/src/assets/portfolio/product4.jpg";
+import product5 from "/src/assets/portfolio/product5.jpg";
+import product6 from "/src/assets/portfolio/product6.jpg";
+import corporate1 from "/src/assets/portfolio/corporate1.jpg";
+import corporate2 from "/src/assets/portfolio/corporate2.jpg";
+import corporate3 from "/src/assets/portfolio/corporate3.jpg";
+import corporate4 from "/src/assets/portfolio/corporate4.jpg";
+import corporate5 from "/src/assets/portfolio/corporate5.jpg";
+import corporate6 from "/src/assets/portfolio/corporate6.jpg";
+import corporate7 from "/src/assets/portfolio/corporate7.jpg";
+import corporate8 from "/src/assets/portfolio/corporate8.jpg";
+import corporate9 from "/src/assets/portfolio/corporate9.jpg";
+import beauty1 from "/src/assets/portfolio/beauty1.jpg";
+import beauty2 from "/src/assets/portfolio/beauty2.webp";
+import beauty3 from "/src/assets/portfolio/beauty3.webp";
+import beauty4 from "/src/assets/portfolio/beauty4.webp";
+import beauty5 from "/src/assets/portfolio/beauty5.webp";
+import beauty6 from "/src/assets/portfolio/beauty6.webp";
+import beauty7 from "/src/assets/portfolio/beauty7.webp";
+import creative1 from "/src/assets/portfolio/creative1.jpg";
+import creative2 from "/src/assets/portfolio/creative2.jpg";
+import creative3 from "/src/assets/portfolio/creative3.jpg";
+import creative4 from "/src/assets/portfolio/creative4.jpg";
+import creative5 from "/src/assets/portfolio/creative5.jpg";
+import creative6 from "/src/assets/portfolio/creative6.jpg";
+import creative7 from "/src/assets/portfolio/creative7.jpg";
+import creative8 from "/src/assets/portfolio/creative8.jpg";
+import creative9 from "/src/assets/portfolio/creative9.jpg";
+import creative10 from "/src/assets/portfolio/creative10.jpg";
+import event1 from "/src/assets/portfolio/event1.jpg"
+import event2 from "/src/assets/portfolio/event2.jpg"
+import event3 from "/src/assets/portfolio/event3.jpg"
+import event4 from "/src/assets/portfolio/event4.jpg"
+import event5 from "/src/assets/portfolio/event5.jpg"
+import event6 from "/src/assets/portfolio/event6.jpg"
+import event7 from "/src/assets/portfolio/event7.jpg"
+import event8 from "/src/assets/portfolio/event8.jpg"
+import event9 from "/src/assets/portfolio/event9.jpg"
+import event10 from "/src/assets/portfolio/event10.jpg"
+import event11 from "/src/assets/portfolio/event11.jpg"
+import event12 from "/src/assets/portfolio/event12.jpg"
+import event13 from "/src/assets/portfolio/event13.jpg"
+import event14 from "/src/assets/portfolio/event14.jpg"
+import event15 from "/src/assets/portfolio/event15.jpg"
+import event16 from "/src/assets/portfolio/event16.jpg"
+import event17 from "/src/assets/portfolio/event17.jpg"
+import event18 from "/src/assets/portfolio/event18.jpg"
+import event19 from "/src/assets/portfolio/event19.jpg"
+import event20 from "/src/assets/portfolio/event20.jpg"
+import event21 from "/src/assets/portfolio/event21.jpg"
+import event22 from "/src/assets/portfolio/event22.jpg"
+import event23 from "/src/assets/portfolio/event23.jpg"
+import event24 from "/src/assets/portfolio/event24.jpg"
+import event25 from "/src/assets/portfolio/event25.jpg"
+import event26 from "/src/assets/portfolio/event26.jpg"
+import event27 from "/src/assets/portfolio/event27.jpg"
+import event28 from "/src/assets/portfolio/event28.jpg"
+import event29 from "/src/assets/portfolio/event29.jpg"
+import event30 from "/src/assets/portfolio/event30.jpg"
+import event31 from "/src/assets/portfolio/event31.jpg"
+import event32 from "/src/assets/portfolio/event32.jpg"
+import event33 from "/src/assets/portfolio/event33.jpg"
+import event34 from "/src/assets/portfolio/event34.jpg"
+import event35 from "/src/assets/portfolio/event35.jpg"
+import event36 from "/src/assets/portfolio/event36.jpg"
+import event37 from "/src/assets/portfolio/event37.jpg"
+import event38 from "/src/assets/portfolio/event38.jpg"
+import event39 from "/src/assets/portfolio/event39.jpg"
+import event40 from "/src/assets/portfolio/event40.jpg"
 
 const images = [
-  { src: '/src/assets/portfolio/product1.jpg', title: 'Elegant Watch', category: 'Product Shot' },
-  { src: '/src/assets/portfolio/corporate1.jpg', title: 'Executive Portrait', category: 'Corporate Portrait' },
-  { src: '/src/assets/portfolio/beauty1.jpg', title: 'Birthday Celebration', category: 'Beauty Shot' },
-  { src: '/src/assets/portfolio/creative1.jpg', title: 'Abstract Vibes', category: 'Creative Shot' },
-  { src: '/src/assets/portfolio/event1.jpg', title: 'Live Event Energy', category: 'Event' },
-  { src: '/src/assets/portfolio/product2.jpg', title: 'Stylish Footwear', category: 'Product Shot' },
-  { src: '/src/assets/portfolio/corporate2.jpg', title: 'Office Ambiance', category: 'Corporate Portrait' },
-  { src: '/src/assets/portfolio/beauty2.webp', title: 'Smiles All Around', category: 'Beauty Shot' },
-  { src: '/src/assets/portfolio/creative2.jpg', title: 'Urban Creativity', category: 'Creative Shot' },
-  { src: '/src/assets/portfolio/event2.jpg', title: 'Concert Lights', category: 'Event' },
-  { src: '/src/assets/portfolio/product3.jpg', title: 'Stylish Footwear', category: 'Product Shot' },
-  { src: '/src/assets/portfolio/corporate3.jpg', title: 'Office Ambiance', category: 'Corporate Portrait' },
-  { src: '/src/assets/portfolio/beauty3.webp', title: 'Smiles All Around', category: 'Beauty Shot' },
-  { src: '/src/assets/portfolio/creative3.jpg', title: 'Urban Creativity', category: 'Creative Shot' },
-  { src: '/src/assets/portfolio/event3.jpg', title: 'Concert Lights', category: 'Event' },
-  { src: '/src/assets/portfolio/event4.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/creative4.jpg', title: 'Office Ambiance', category: 'Creative Shot' },
-  { src: '/src/assets/portfolio/beauty4.webp', title: 'Smiles All Around', category: 'Beauty Shot' },
-  { src: '/src/assets/portfolio/corporate4.jpg', title: 'Urban Creativity', category: 'Corporate Portrait' },
-  { src: '/src/assets/portfolio/product4.jpg', title: 'Concert Lights', category: 'Product Shot' },
-  { src: '/src/assets/portfolio/event5.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/creative5.jpg', title: 'Office Ambiance', category: 'Creative Shot' },
-  { src: '/src/assets/portfolio/beauty5.webp', title: 'Smiles All Around', category: 'Beauty Shot' },
-  { src: '/src/assets/portfolio/corporate5.jpg', title: 'Urban Creativity', category: 'Corporate Portrait' },
-  { src: '/src/assets/portfolio/product5.jpg', title: 'Concert Lights', category: 'product Shot' },
-  { src: '/src/assets/portfolio/event6.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/creative6.jpg', title: 'Office Ambiance', category: 'Creative Shot' },
-  { src: '/src/assets/portfolio/beauty6.webp', title: 'Smiles All Around', category: 'Beauty Shot' },
-  { src: '/src/assets/portfolio/corporate6.jpg', title: 'Urban Creativity', category: 'Corporate Portrait' },
-  { src: '/src/assets/portfolio/product6.jpg', title: 'Concert Lights', category: 'product Shot' },
-  { src: '/src/assets/portfolio/event7.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/creative7.jpg', title: 'Office Ambiance', category: 'Creative Shot' },
-  { src: '/src/assets/portfolio/beauty7.webp', title: 'Smiles All Around', category: 'Beauty Shot' },
-  { src: '/src/assets/portfolio/corporate7.jpg', title: 'Urban Creativity', category: 'Corporate Portrait' },
-  { src: '/src/assets/portfolio/event8.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/creative8.jpg', title: 'Office Ambiance', category: 'Creative Shot' },
-  { src: '/src/assets/portfolio/corporate8.jpg', title: 'Urban Creativity', category: 'Corporate Portrait' },
-  { src: '/src/assets/portfolio/event9.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/creative9.jpg', title: 'Office Ambiance', category: 'Creative Shot' },
-  { src: '/src/assets/portfolio/corporate9.jpg', title: 'Urban Creativity', category: 'Corporate Portrait' },
-  { src: '/src/assets/portfolio/event10.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/creative10.jpg', title: 'Office Ambiance', category: 'Creative Shot' },
-  { src: '/src/assets/portfolio/event11.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event12.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event13.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event15.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event16.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event17.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event18.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event19.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event20.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event21.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event22.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event23.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event24.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event25.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event26.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event27.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event28.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event29.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event30.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event31.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event32.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event33.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event34.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event35.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event36.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event37.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event38.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event39.jpg', title: 'Stylish Footwear', category: 'Event' },
-  { src: '/src/assets/portfolio/event40.jpg', title: 'Stylish Footwear', category: 'Event' },
+  { src: product1, title: 'Elegant Watch', category: 'Product Shot' },
+  { src: corporate1, title: 'Executive Portrait', category: 'Corporate Portrait' },
+  { src: beauty1, title: 'Birthday Celebration', category: 'Beauty Shot' },
+  { src: creative1, title: 'Abstract Vibes', category: 'Creative Shot' },
+  { src: event1, title: 'Live Event Energy', category: 'Event' },
+  { src: product2, title: 'Stylish Footwear', category: 'Product Shot' },
+  { src: corporate2, title: 'Office Ambiance', category: 'Corporate Portrait' },
+  { src: beauty2, title: 'Smiles All Around', category: 'Beauty Shot' },
+  { src: creative2, title: 'Urban Creativity', category: 'Creative Shot' },
+  { src: event2, title: 'Concert Lights', category: 'Event' },
+  { src: product3, title: 'Stylish Footwear', category: 'Product Shot' },
+  { src: corporate3, title: 'Office Ambiance', category: 'Corporate Portrait' },
+  { src: beauty3, title: 'Smiles All Around', category: 'Beauty Shot' },
+  { src: creative3, title: 'Urban Creativity', category: 'Creative Shot' },
+  { src: event3, title: 'Concert Lights', category: 'Event' },
+  { src: event4, title: 'Stylish Footwear', category: 'Event' },
+  { src: creative4, title: 'Office Ambiance', category: 'Creative Shot' },
+  { src: beauty4, title: 'Smiles All Around', category: 'Beauty Shot' },
+  { src: corporate4, title: 'Urban Creativity', category: 'Corporate Portrait' },
+  { src: product4, title: 'Concert Lights', category: 'Product Shot' },
+  { src: event5, title: 'Stylish Footwear', category: 'Event' },
+  { src: creative5, title: 'Office Ambiance', category: 'Creative Shot' },
+  { src: beauty5, title: 'Smiles All Around', category: 'Beauty Shot' },
+  { src: corporate5, title: 'Urban Creativity', category: 'Corporate Portrait' },
+  { src: product5, title: 'Concert Lights', category: 'product Shot' },
+  { src: event6, title: 'Stylish Footwear', category: 'Event' },
+  { src: creative6, title: 'Office Ambiance', category: 'Creative Shot' },
+  { src: beauty6, title: 'Smiles All Around', category: 'Beauty Shot' },
+  { src: corporate6, title: 'Urban Creativity', category: 'Corporate Portrait' },
+  { src: product6, title: 'Concert Lights', category: 'product Shot' },
+  { src: event7, title: 'Stylish Footwear', category: 'Event' },
+  { src: creative7, title: 'Office Ambiance', category: 'Creative Shot' },
+  { src: beauty7, title: 'Smiles All Around', category: 'Beauty Shot' },
+  { src: corporate7, title: 'Urban Creativity', category: 'Corporate Portrait' },
+  { src: event8, title: 'Stylish Footwear', category: 'Event' },
+  { src: creative8, title: 'Office Ambiance', category: 'Creative Shot' },
+  { src: corporate8, title: 'Urban Creativity', category: 'Corporate Portrait' },
+  { src: event9, title: 'Stylish Footwear', category: 'Event' },
+  { src: creative9, title: 'Office Ambiance', category: 'Creative Shot' },
+  { src: corporate9, title: 'Urban Creativity', category: 'Corporate Portrait' },
+  { src: event10, title: 'Stylish Footwear', category: 'Event' },
+  { src: creative10, title: 'Office Ambiance', category: 'Creative Shot' },
+  { src: event11, title: 'Stylish Footwear', category: 'Event' },
+  { src: event12, title: 'Stylish Footwear', category: 'Event' },
+  { src: event13, title: 'Stylish Footwear', category: 'Event' },
+  { src: event15, title: 'Stylish Footwear', category: 'Event' },
+  { src: event16, title: 'Stylish Footwear', category: 'Event' },
+  { src: event17, title: 'Stylish Footwear', category: 'Event' },
+  { src: event18, title: 'Stylish Footwear', category: 'Event' },
+  { src: event19, title: 'Stylish Footwear', category: 'Event' },
+  { src: event20, title: 'Stylish Footwear', category: 'Event' },
+  { src: event21, title: 'Stylish Footwear', category: 'Event' },
+  { src: event22, title: 'Stylish Footwear', category: 'Event' },
+  { src: event23, title: 'Stylish Footwear', category: 'Event' },
+  { src: event24, title: 'Stylish Footwear', category: 'Event' },
+  { src: event25, title: 'Stylish Footwear', category: 'Event' },
+  { src: event26, title: 'Stylish Footwear', category: 'Event' },
+  { src: event27, title: 'Stylish Footwear', category: 'Event' },
+  { src: event28, title: 'Stylish Footwear', category: 'Event' },
+  { src: event29, title: 'Stylish Footwear', category: 'Event' },
+  { src: event30, title: 'Stylish Footwear', category: 'Event' },
+  { src: event31, title: 'Stylish Footwear', category: 'Event' },
+  { src: event32, title: 'Stylish Footwear', category: 'Event' },
+  { src: event33, title: 'Stylish Footwear', category: 'Event' },
+  { src: event34, title: 'Stylish Footwear', category: 'Event' },
+  { src: event35, title: 'Stylish Footwear', category: 'Event' },
+  { src: event36, title: 'Stylish Footwear', category: 'Event' },
+  { src: event37, title: 'Stylish Footwear', category: 'Event' },
+  { src: event38, title: 'Stylish Footwear', category: 'Event' },
+  { src: event39, title: 'Stylish Footwear', category: 'Event' },
+  { src: event40, title: 'Stylish Footwear', category: 'Event' },
 ];
 
 const categories = [

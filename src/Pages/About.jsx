@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import photographer from "/src/assets/portfolio/photographer.jpg"
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -40,12 +41,12 @@ function About() {
           </div>
 
           <div>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition text-lg font-medium"
             >
               Let’s Work Together
-            </a>
+            </Link>
           </div>
         </div>
       </div>
