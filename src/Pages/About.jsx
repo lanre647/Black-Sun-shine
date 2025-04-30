@@ -37,9 +37,9 @@ function About() {
           <div className="bg-white text-black rounded-2xl p-6 shadow-lg">
             <h4 className="text-xl font-medium text-black mb-2">Career Highlights</h4>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
-              <li>Published in PhotoLife Magazine</li>
-              <li>Featured in Urban Gallery 2023</li>
-              <li>Top 10 Finalist – StreetPhoto Awards</li>
+              <li>Strong Passion For Photography</li>
+              <li>Developing Both Artistic And Technical Skills</li>
+              <li>Showcasing A Diverse Range Of Photography Styles</li>
             </ul>
           </div>
 
