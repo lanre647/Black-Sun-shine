@@ -173,10 +173,7 @@ export default function Portfolio() {
   };
 
   const scrollToNextSection = () => {
-    if (gridRef.current) {
-      const gridTop = gridRef.current.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: gridTop, behavior: 'smooth' });
-    }
+    window.scrollTo({ bottom: 0, behavior: 'smooth' });
   };
 
   return (
