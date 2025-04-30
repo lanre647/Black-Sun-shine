@@ -25,7 +25,7 @@ function Services() {
       title: "Event Coverage",
       description:
         "Portrait coverage for weddings, birthdays, and corporate events. Full gallery with logistics handled.",
-      price: "From ₦120,000",
+      price: "From ₦200,000",
     },
     {
       icon: <FaBook size={30} />,
